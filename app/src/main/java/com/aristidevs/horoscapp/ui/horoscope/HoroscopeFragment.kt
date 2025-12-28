@@ -6,10 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aristidevs.horoscapp.databinding.FragmentHoroscopeBinding
 import com.aristidevs.horoscapp.ui.horoscope.adapter.HoroscopeAdapter
@@ -41,9 +43,11 @@ class HoroscopeFragment : Fragment() {
 
     //Metodo para inicar el recycler view
     private fun initList() {
-       horoscopeadapter = HoroscopeAdapter()
+       horoscopeadapter = HoroscopeAdapter(onItemSelected = {
+           Toast.makeText(context,getString(it.name),Toast.LENGTH_SHORT).show()
+       })
         binding.rvHoroscope.apply {
-            layoutManager = LinearLayoutManager(context)
+            layoutManager = GridLayoutManager(context,2)
             adapter = horoscopeadapter
         }
 
