@@ -18,11 +18,12 @@ class HoroscopeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         binding.parent.setOnClickListener {
             startRotationAnimation(binding.ivHoroscope, newLambda = {
+
                 onItemSelected(horoscopeInfo)
+
             })
 
         }
-
 
     }
     private fun startRotationAnimation(view:View, newLambda:()-> Unit){
