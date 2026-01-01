@@ -18,7 +18,7 @@ class HoroscopeViewModel @Inject constructor(horoscopeProvider: HoroscopeProvide
 
     val horoscope: StateFlow<List<HoroscopeInfo>> = _horoscope
 
-    //Como el oncrete de las activity normales
+    //Como el oncreate de las activity normales
     init {
         _horoscope.value = horoscopeProvider.getHoroscopes()
     }
