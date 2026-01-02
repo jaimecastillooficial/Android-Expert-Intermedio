@@ -8,10 +8,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/JaimeName"
+        android:icon="@drawable/zo3"
+        android:label="@string/jaimeName"
 
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HoroscApp">
         <activity
@@ -19,7 +18,8 @@
             android:exported="false" />
         <activity
             android:name=".ui.home.MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/splashtheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

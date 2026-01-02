@@ -22,5 +22,9 @@
         <item name="android:textSize">20sp</item>
     </style>
 
-
+<style name="splashtheme" parent="Theme.Material3.DayNight.NoActionBar">
+    <item name="android:windowBackground">@drawable/splashscreen</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowFullscreen">true</item>
+</style>
 </resources>
